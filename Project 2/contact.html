@@ -39,43 +39,62 @@
     <main>
         <section>
             <content>
-                <h1>
-                    Contact Formulier
-                </h1>
-                <form>
-                    <label for="voornaam ">Voornaam</label>
-                    <input type="text " id="voornaam " name="voornaam " placeholder="John ">
-
-                    <label for="familienaam ">Familienaam</label>
-                    <input type="text " id="familienaam " name="familienaam " placeholder="Houtmakers ">
-
-                    <label for="bedrijfsnaam ">Naam bedrijf</label>
-                    <input type="text " id="bedrijfsnaam " name="bedrijfsnaam " placeholder="Bedrijfsnaam ">
-
-                    <label for="telefoonnummer ">Telefoonnummer</label>
-                    <input type="text " id="telefoonnummer " name="telefoonnummer " placeholder="Telefoonnummer ">
-
-                    <label for="email ">E-mail</label>
-                    <input type="email " id="email " name="email " placeholder="John.Houtmakers@hotmail.be ">
-
-                    <label for="onderwerp ">Onderwerp</label>
-                    <input type="text " id="onderwerp " name="onderwerp " placeholder="Onderwerp ">
-
-                    <textarea placeholder="Bericht "></textarea>
-                    <input type="submit " value="Bericht verzenden ">
-                </form>
+                <div class="container">
+                    <div class="text-center">
+                        <h1 class="mb-4">Contact Formulier</h1>
+                    </div>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-5 col-md-8 text-center">
+                            <div class="form">
+                                <form method="post" class="contactForm">
+                                    <div class="form-group mb-3">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Naam" data-rule="minlen:4" data-msg="Geef tenminste 4 karakters!">
+                                        <div class="validation text-danger"></div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="text" name="company" class="form-control" id="company" placeholder="Bedrijfsnaam" data-rule="minlen:3" data-msg="Geef tenminste 3 karakters!">
+                                        <div class="validation text-danger"></div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Telefoonnummer" data-rule="minlen:8" data-msg="Gelieve een Telefoonnummer in te vullen.">
+                                        <div class="validation text-danger"></div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Geef een valide e-mailadres in">
+                                        <div class="validation text-danger"></div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Onderwerp" data-rule="minlen:4" data-msg="Geef op z'n minst 8 karakters in!">
+                                        <div class="validation text-danger"></div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <textarea class="form-control" name="message" rows="5" placeholder="Bericht"></textarea>
+                                    </div>
+                                    <div class="text-center text-danger">
+                                        <button type="submit" class="btn btn-primary btn-round-lg btn-xl">Verstuur bericht</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </content>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p>Vragen of contact opnemen?</p>
-            <a href="mailto:r0896931@thomasmore.be " class="hyperlinks">
-                <figcaption>Verstuur een mail!</figcaption><img src="images/iconMail.png " alt="iconMail " id="mailIcon" title="Verstuur een bericht "></a>
-            <p>Copyright &copy; 2021 - Jorrit Janssens</p>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="text-muted">Copyright &copy; 2021 - Jorrit Janssens</span>
         </div>
+        <ul class="nav col-md-5 justify-content-end list-unstyled d-flex">
+            <a href="mailto:r0896931@thomasmore.be " class="icons ml-2">
+                <img src="images/iconMail.png " alt="iconMail " title="Verstuur een bericht "></a>
+            <a class="icons" href="# "><i class="bi bi-linkedin "></i></a>
+            <a class="icons" href="# "><i class="bi bi-discord "></i></a>
+        </ul>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
 
 </body>
