@@ -48,30 +48,32 @@
                             <div class="form">
                                 <form method="post" class="contactForm">
                                     <div class="form-group mb-3">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Naam" data-rule="minlen:4" data-msg="Geef tenminste 4 karakters!">
+                                        <input type="text" required name="naam" class="form-control" id="naam" placeholder="Naam">
                                         <div class="validation text-danger"></div>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input type="text" name="company" class="form-control" id="company" placeholder="Bedrijfsnaam" data-rule="minlen:3" data-msg="Geef tenminste 3 karakters!">
+                                        <input type="text" required name="voornaam" class="form-control" id="voornaam" placeholder="Voornaam">
                                         <div class="validation text-danger"></div>
                                     </div>
                                     <div class="form-group mb-3">
-                                        <input type="tel" name="phone" class="form-control" id="phone" placeholder="Telefoonnummer" data-rule="minlen:8" data-msg="Gelieve een Telefoonnummer in te vullen.">
+                                        <input type="email" input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Geef een geldig e-mailadres op.">
                                         <div class="validation text-danger"></div>
                                     </div>
+                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                                        <option selected>Vaardigheid in kwestie</option>
+                                        <option value="HTML">HTML</option>
+                                        <option value="CSS">CSS</option>
+                                        <option value="C# Console">C# Console</option>
+                                        <option value="C# WPF">C# WPF</option>
+                                        <option value="Asp.net">Asp.net</option>
+                                        <option value="Git">Git</option>
+                                    </select>
                                     <div class="form-group mb-3">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Geef een valide e-mailadres in">
-                                        <div class="validation text-danger"></div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Onderwerp" data-rule="minlen:4" data-msg="Geef op z'n minst 8 karakters in!">
-                                        <div class="validation text-danger"></div>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <textarea class="form-control" name="message" rows="5" placeholder="Bericht"></textarea>
+                                        <textarea class="form-control" name="vraag" rows="6" placeholder="Vraag"></textarea>
                                     </div>
                                     <div class="text-center text-danger">
-                                        <button type="submit" class="btn btn-primary btn-round-lg btn-xl">Verstuur bericht</button>
+                                        <button type="submit" class="btn btn-primary btn-round-lg btn-xl">Verstuur
+                                            bericht</button>
                                     </div>
                                 </form>
                             </div>
@@ -81,10 +83,12 @@
             </content>
         </section>
     </main>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
         <div class="col-md-4 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
             </a>
             <span class="text-muted">Copyright &copy; 2021 - Jorrit Janssens</span>
         </div>
