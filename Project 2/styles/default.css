@@ -8,6 +8,7 @@
              :root {
                 --bg-color: white;
                 --footer-color: #f3f2f1;
+                --generalText-color: black;
                 --typewriterSpeed: 3s;
                 --typewriterCharacters: 24;
             }
@@ -131,47 +132,61 @@
                 #welcome {
                     font-size: 35px;
                 }
-                #welcome::before,
-                #welcome::after {
-                    content: "";
-                    position: absolute;
-                    text-align: center;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                }
-                #welcome::before {
-                    background: var(--bg-color);
-                    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
-                }
-                #welcome::after {
-                    width: 0.125em;
-                    background: black;
-                    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
-                }
-                @keyframes typewriter {
-                    to {
-                        left: 100%;
-                    }
-                }
-                @keyframes blink {
-                    to {
-                        background: transparent;
-                    }
+            }
+            
+            #welcome::before,
+            #welcome::after {
+                content: "";
+                position: absolute;
+                text-align: center;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            
+            #welcome::before {
+                background: var(--bg-color);
+                animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+            }
+            
+            #welcome::after {
+                width: 0.125em;
+                background: var(--generalText-color);
+                animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters)) infinite;
+            }
+            
+            @keyframes typewriter {
+                to {
+                    left: 100%;
                 }
             }
             
-            #subtitle {
-                color: black;
+            @keyframes blink {
+                to {
+                    background: transparent;
+                }
+            }
+            
+            .subtitle {
+                color: var(--generalText-color);
                 font-size: 25px;
                 font-weight: 400;
                 opacity: 0;
                 transform: translateX(-3rem);
-                animation: fadeInLeft 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+                animation: fadeIn 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
             }
             
-            @keyframes fadeInLeft {
+            .kader p {
+                color: var(--generalText-color);
+                font-size: 25px;
+                font-weight: 400;
+                opacity: 0;
+                transform: translateY(3rem);
+                animation: fadeIn 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+            }
+            
+            @keyframes fadeIn {
                 to {
                     opacity: 1;
                     transform: translateY(0);
