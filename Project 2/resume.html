@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-custom ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/logoHeader" alt="logoHeader " title="logoWebsite "></a>
+            <a class="navbar-brand" href="#"><img src="images/logoHeader" alt="Jorrit Janssens " title="logoWebsite "></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,48 +36,74 @@
             </div>
         </div>
     </nav>
-    <main>
-        <section>
-            <content>
+    <main class="container">
+        <section class="row">
+            <section>
+                <h1>Diploma's</h1>
+                <div class="container">
+                    <div class="col-xs">
+                        <ul class="opsomming">
+                            <li>Lager onderwijs</li>
+                            <li>Secundair onderwijs richting: Informaticabeheer</li>
+                        </ul>
+                    </div>
+                    <a href="http://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Bekijk CV</a>
+                    <a href="http://google.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download CV</a>
+                </div>
+            </section>
+        </section>
+        <section class="row">
+            <article class="col-sm">
                 <h2>Vaardigheden</h2>
-                <ul>
+                <ul class="opsomming">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>C# Console</li>
                     <li>C# WPF</li>
                     <li>Asp.net</li>
                 </ul>
-                <h1>Diploma's</h1>
-                <ul>
-                    <li>Lager onderwijs</li>
-                    <li>Secundair onderwijs richting: Informaticabeheer</li>
-                </ul>
-                <input type="submit " value="Bekijk CV ">
-                <input type="submit " value="Download CV ">
+            </article>
+            <article class="col-sm">
                 <h2>Eigenschappen</h2>
-                <h3>Positief</h3>
-                <ul>
-                    <li>Behulpzaam</li>
-                    <li>Creatief</li>
-                    <li>Dankbaar</li>
-                    <li>Vriendelijk</li>
-                    <li>Doorzetter</li>
-                </ul>
-                <h3>Negatief</h3>
-                <ul>
-                    <li>Slordig</li>
-                    <li>Laag tempo</li>
-                    <li>Perfectionist</li>
-                </ul>
-            </content>
-        </section>
+                <section class="row">
+                    <article class="col-md">
+                        <h3>Positief</h3>
+                        <ul class="opsomming">
+                            <li>Behulpzaam</li>
+                            <li>Creatief</li>
+                            <li>Dankbaar</li>
+                            <li>Vriendelijk</li>
+                            <li>Doorzetter</li>
+                        </ul>
+                    </article>
+                    <article class="col-md">
+                        <h3>Negatief</h3>
+                        <ul class="opsomming">
+                            <li>Slordig</li>
+                            <li>Laag tempo</li>
+                            <li>Perfectionist</li>
+                        </ul>
+                    </article>
+            </article>
+            </section>
+            </article>
+
+
     </main>
     <footer>
         <div class="container">
-            <p>Vragen of contact opnemen?</p>
-            <a href="mailto:r0896931@thomasmore.be " class="hyperlinks">
-                <figcaption>Verstuur een mail!</figcaption><img src="images/iconMail.png " alt="iconMail " id="mailIcon" title="Verstuur een bericht "></a>
-            <p>Copyright &copy; 2021 - Jorrit Janssens</p>
+            <div class="row" id="footer">
+                <section class="col-sm-5 column-1">
+                    <p>Copyright &copy; 2021 - Jorrit Janssens</p>
+                </section>
+                <section class="col-sm-7 column-2">
+                    <p>Vragen of contact opnemen?</p>
+                    <a href="mailto:r0896931@thomasmore.be " class="icons">
+                        <img src="images/iconMail.png " alt="iconMail " title="Verstuur een bericht "></a>
+                    <a class="icons" href="# "><i class="bi bi-linkedin "></i></a>
+                    <a class="icons" href="# "><i class="bi bi-discord "></i></a>
+                </section>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
