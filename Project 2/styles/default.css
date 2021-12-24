@@ -70,8 +70,10 @@
                     padding: 10px;
                 }
                 
-                .container {
-                    margin-bottom: 50px;
+                .center {
+                    margin-top: 125px;
+                    margin-left: 0 auto;
+                    margin-Right: 0 auto;
                 }
                 
                 .icons {
